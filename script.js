@@ -6,7 +6,7 @@ const files = fs.readdirSync(path.resolve(__dirname, `${cfg.path}`));
 
 const arrFiles = [];
 files.forEach(async (file) => {
-  if (file.indexOf('.sql') > -1) {
+  if (file.indexOf('.sql') > -1 || file.indexOf('.SQL') > -1) {
     arrFiles.push(path.resolve(__dirname, `${cfg.path}`, `${file}`));
   }
 });
